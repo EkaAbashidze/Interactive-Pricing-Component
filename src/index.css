@@ -1,13 +1,398 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Manrope', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* text-align: center; */
+}
+
+.rectangle {
+  width: 100%;
+  height: 400px;
+  background-color: #F1F5FE;
+  border-radius: 0px 0px 0px 191.5px;
+  position: absolute;
+  z-index: -1;
+}
+
+.patternCircles {
+  margin-top: 57px;
+  margin-left: 115px;
+}
+
+.container {
+  width: 327px;
+  height: 478px;
+  border-radius: 8px;
+  box-shadow: 0px 20px 30px -5px rgba(127, 137, 185, 0.152073);
+  background-color: #FFFFFF;
+  padding: 34px 24px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.opening {
+  background-position: top 60% left 50%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.headline {
+  color: #293356;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 800;
+  padding-top: 89px;
+}
+
+
+.subHeadline {
+  padding-top: 8px;
+  padding-bottom: 64px;
+  color: #848EAD;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 23px;
+}
+
+.views {
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.71429px;
+  color: #848EAD;
+}
+
+.line {
+  -webkit-appearance: none;
+  background-color: #ECF0FB;
+  width: 279px;
+  height: 8px;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 41px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.line::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #10D8C4;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0px 15px 30px rgba(0, 255, 231, 0.6);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 3;
+  position: relative;
+}
+
+.greenLine {
+  height: 8px;
+  width: 50%;
+  background-color: #A4F3EB;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 2;
+  border-radius: 5px;
+}
+
+.fullLine {
+  position: relative;
+  width: 100%;
+}
+
+.monthly {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.price {
+  color: #293356;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: -0.8px;
+}
+
+.month {
+  color: #848EAD;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.billing {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 34px;
+  margin-bottom: 38px;
+  padding-right: 12px;
+  margin-left: 44.5px;
+}
+
+.monthlyBilling, .yearlyBilling {
+  color: #848EAD;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.discountDiv {
+  background-color: #FEEDE8;
+  width: 41px;
+  height: 19px;
+  border-radius: 9.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5.5px;
+}
+
+.discountPar {
+  color: #FF8D68;
+  font-weight: 800;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.checkBilling {
+  width: 43px;
+  height: 22px;
+  border-radius: 15px;
+  margin-left: 12px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  transition: padding-left 0.5s, background-color 0.5s;
+}
+
+  .checkBilling:hover {
+    background-color: #7AEADF;
+  }
+
+.checkCircle {
+  width: 14px;
+  height: 14px;
+  background-color: #FFFFFF;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.littleLine {
+  width: 327px;
+  height: 1px;
+  background-color: #ECF0FB;
+  margin-bottom: 24px;
+}
+
+.benefitOne, .benefitTwo, .benefitThree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: #848EAD;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 33px;
+}
+
+.button {
+  width: 170px;
+  height: 41px;
+  background-color: #293356;
+  border-radius: 20.5px;
+  color: #BECDFF;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+    .monthlyDesktop {
+      display: none;
+    }
+
+    .discountSpan {
+      display: none;
+    }
+
+
+/* DESKTOP MEDIA QUERY */
+
+
+@media screen and (min-width: 1439.5px) {
+
+  .discountDiv {
+    width: 80px;
+    height: 19px;
+
+  }
+  
+  .discountPar {
+    display: flex;
+    column-gap: 3px;
+  }
+  
+  .discountSpan {
+      display: block;
+    }
+  
+  .ending {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 133px;
+  }
+
+  .container {
+    width: 540px;
+    height: 100%;
+    padding-bottom: 33px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+
+  .benefits {
+    margin: 0;
+    align-items: flex-start;
+  }
+
+
+  .monthly {
+    display: none;
+  }
+
+  .monthlyDesktop {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .viewsDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .rectangle {
+    height: 449px;
+  }
+
+  .line {
+    width: 444px;
+    height: 8px;
+  }
+
+  .circle {
+    top: -200%;
+    left: 45%;
+  }
+
+  .littleLine {
+    width: 540px;
+    height: 1px;
+  }
+
+  .patternCircles {
+    margin-top: 67px;
+    margin-left: 647px;
+  }
+
+  .headline {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .subHeadline {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .views {
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 2px;
+  }
+
+  .price {
+    font-size: 40px;
+    line-height: 55px;
+    letter-spacing: -1px;
+  }
+
+  .month {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .circle {
+    cursor: pointer;
+  }
+
+  .checkBilling {
+    cursor: pointer;
+  }
+
+  .line {
+    margin-top: 40px;
+    margin-bottom: 0px;
+  }
+
+  .billing {
+    margin-top: 56px;
+    margin-bottom: 40px;
+    margin-left: 154px;
+    padding: 0;
+  }
+
+.littleLine {
+  margin-bottom: 32px;
+}
+
+/* .fullLine {
+  width: 100px;
+} */
+
+
+
+
+
 }
